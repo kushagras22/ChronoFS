@@ -13,17 +13,10 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 # Gather all source files
 file(GLOB_RECURSE SOURCES
-    src/cli/*.cpp
-    src/fs/*.cpp
-    src/util/*.cpp
-    src/vcs/*.cpp
+    ${chronofs}/src/*.cpp
 )
-
 file(GLOB_RECURSE HEADERS
-    src/cli/*.hpp
-    src/fs/*.hpp
-    src/util/*.hpp
-    src/vcs/*.hpp
+    ${chronofs}/src/*.hpp
 )
 
 # Create the executable
@@ -31,11 +24,7 @@ add_executable(chronofs ${SOURCES} ${HEADERS})
 
 # Include directories for header files
 target_include_directories(chronofs PRIVATE
-    src
-    src/cli
-    src/fs
-    src/util
-    src/vcs
+    ${chronofs}/src
 )
 
 # Extra compiler warnings (optional but useful)
@@ -43,4 +32,8 @@ if (MSVC)
     target_compile_options(chronofs PRIVATE /W4 /permissive-)
 else()
     target_compile_options(chronofs PRIVATE -Wall -Wextra -pedantic)
+endif()
+
+if (MINGW)
+    target_link_libraries(${chronofs} PRIVATE stdc++fs)
 endif()
