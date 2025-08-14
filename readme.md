@@ -1,7 +1,7 @@
 # ChronoFS
 
 ## Overview
-**ChronoFS** is a lightweight, C++17-based file management and version control system **built from scratch** — no external VCS like Git.  
+**ChronoFS** is a lightweight, C++17-based file management and version control system **built from scratch**, no external VCS like Git.  
 
 It allows you to:
 - Create, delete, rename, and move files or directories (folders/sub-folders)
@@ -26,18 +26,18 @@ ChronoFS follows a **layered modular architecture**:
 
 ---
 
-## 🚀 Features
-- ✅ Create, delete, move, and rename files/folders
-- ✅ Track file history with version timestamps
-- ✅ Restore any previous file version
-- ✅ Show file changes using a `diff` command
-- ✅ Query working directory status
-- ✅ Logging with detailed change history
-- ✅ Modular architecture for easy future expansion
+##  Features
+- Create, delete, move, and rename files/folders
+- Track file history with version timestamps
+- Restore any previous file version
+- Show file changes using a `diff` command
+- Query working directory status
+- Logging with detailed change history
+- Modular architecture for easy future expansion
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 .
 ├── cli/ # Command-line interface handlers
 ├── fs/ # File system abstraction layer
@@ -46,14 +46,14 @@ ChronoFS follows a **layered modular architecture**:
 ├── CMakeLists.txt
 └── README.md
 
-## 🛠 Prerequisites
+## Prerequisites
 - **C++17 or newer** compiler (GCC ≥ 9, Clang ≥ 9, MSVC ≥ 2019)
 - **CMake 3.10+**
 - **MinGW-w64** or **MSYS2** (for Windows users)
 - **Visual Studio Code** or any preferred IDE
 
 
-## ⚙️ Setup & Build Instructions
+## Setup & Build Instructions
 1️⃣ Clone the repository
 git clone https://github.com/kushagras22/ChronoFS.git
 cd chronofs
@@ -84,7 +84,7 @@ cmake --build .
 
 
 ## Contributing
-Contibutions are welcome!
+Contributions are welcome!
 
 1. **Fork the repository** on GitHub.
 2. **Clone your fork** locally:
@@ -102,12 +102,12 @@ git push origin feature-name
 6. **Open a Pull Request**.
 
 
-## 📌 Roadmap
+## Roadmap
 - Add compression for stored versions
 - Add networking support for remote repositories
 - Implement file tagging and search
 - Cross-platform GUI frontend
 
 
-## 🌟 Acknowledgments
+## Acknowledgments
 Built with ❤️ in C++17 to show how **version control concepts** can be implemented **from scratch** without Git.
